@@ -1,7 +1,6 @@
 # PetClinic REST API tests
 
-Отдельный тестовый проект для REST API [Spring PetClinic REST](https://github.com/spring-petclinic/spring-petclinic-rest).
-В репозиторий самого приложения ничего не кла
+Отдельный тестовый проект для REST API [Spring PetClinic REST](https://github.com/spring-petclinic/spring-petclinic-rest)
 
 ## Требования
 
