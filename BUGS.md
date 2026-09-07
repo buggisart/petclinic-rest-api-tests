@@ -77,7 +77,8 @@ Content-Length: 0
 поведение, и оно полезно клиенту: без него после каждого обновления нужен дополнительный `GET`,
 чтобы узнать актуальное состояние (например, изменились ли поля на сервере).
 
-**Тест:** `UpdateOwnerHappyPathTest.updateOwner` — падает с `expected: 200 but was: 204`.
+**Тесты:** `UpdateOwnerHappyPathTest.updateOwner` и `OwnerCrudFlowTest.ownerCrudFlow` — падают
+с `expected: 200 but was: 204`.
 
 ---
 
@@ -109,7 +110,8 @@ Content-Length: 0
 **Почему контракт, а не реализация:** 204 на удаление — общепринятый ответ, возвращать тело
 удалённого объекта клиенту незачем. Исправлять следует спецификацию.
 
-**Тест:** `DeleteOwnerHappyPathTest.deleteOwner` — падает с `expected: 200 but was: 204`.
+**Тесты:** `DeleteOwnerHappyPathTest.deleteOwner` и `OwnerCrudFlowTest.ownerCrudFlow` — падают
+с `expected: 200 but was: 204`.
 
 ---
 
