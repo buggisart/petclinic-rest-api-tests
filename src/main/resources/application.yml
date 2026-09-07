@@ -1,0 +1,2 @@
+petclinic:
+  base-url: ${baseUrl:http://localhost:9966/petclinic}
