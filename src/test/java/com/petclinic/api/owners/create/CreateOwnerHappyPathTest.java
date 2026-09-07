@@ -36,5 +36,12 @@ class CreateOwnerHappyPathTest extends OwnerTestBase {
         deleteAfterTest(created.id());
 
         assertOwnerFields(created, payload);
+
+        Response getResponse = ownerApi.get(created.id());
+        assertThat(getResponse.statusCode()).isEqualTo(200);
+
+        Owner persisted = getResponse.as(Owner.class);
+        assertThat(persisted.id()).isEqualTo(created.id());
+        assertOwnerFields(persisted, payload);
     }
 }

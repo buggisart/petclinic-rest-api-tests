@@ -42,5 +42,8 @@ class DeleteOwnerHappyPathTest extends OwnerTestBase {
         Owner deleted = response.as(Owner.class);
         assertThat(deleted.id()).isEqualTo(created.id());
         assertOwnerFields(deleted, payload);
+
+        Response getResponse = ownerApi.get(created.id());
+        assertThat(getResponse.statusCode()).isEqualTo(404);
     }
 }
